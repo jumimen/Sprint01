@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desencriptador</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="funciones.js"></script>
+</head>
+<body>
+    <section class="frame1">
+        <img class="logo" src="img/Logo.png">
+        <input class="textoIngresado" type="text" placeholder="Ingrese el texto aquí">
+        <textarea id="textoResultado"></textarea>
+        <button type="button" id="encriptar">Encriptar</button>
+        <button type="button" id="descencriptar">Desencriptar</button>
+        <button type="button" id="copiar">Copiar</button>
+    </section>
+    <script> 
+        const textoIngresado = document.querySelector('.textoIngresado');
+        textoIngresado.addEventListener('keydown', validarEntrada);
+        const btnEncriptar = document.querySelector('#encriptar');
+        btnEncriptar.addEventListener('click', mostrarTextoEncriptado);
+        const btnDesencriptar = document.querySelector("#descencriptar");
+        btnDesencriptar.addEventListener("click", mostrarTextoDesencriptado);
+        const btnCopiar = document.querySelector('#copiar');
+        btnCopiar.addEventListener('click', copy)
+        
+        function validarEntrada(event){
+            let tecla = event.key;
+            if (/^[a-z\s]+$|^Backspace$/.test(tecla)) {
+            } else {
+                event.preventDefault();
+            }
+        }
+
+        function copy() {
+          let copyText = document.querySelector("#textoResultado");
+          copyText.select();
+          document.execCommand("copy");
+        }
+    </script>
+</body>
+
+</html>

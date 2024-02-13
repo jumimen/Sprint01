@@ -1,0 +1,17 @@
+body{
+    background-color: #F3F5FC;
+    width: 1440px;
+    height: 1024px;
+    
+}
+.logo{
+    margin-top: 40px;
+    margin-left: 40px;
+}
+.textoIngresado{
+    margin-left:240px;
+    margin-top: 168px;
+    width: 577px;
+    height: 48px;
+    color: #0A3871;
+}
