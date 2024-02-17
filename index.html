@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,31 +10,62 @@
 </head>
 <body>
     <div class="container">
-
+        <section class="frame1">
+            <div class="logo">
+                <img src="img/Logo.png" alt="logo alura">
+                <div>
+                    <input type="text" placeholder="Ingrese el texto aqui" class="textoIngresado">
+                </div>
+                <div class="mensajeAdv">
+                    <img src="img/exclamacion.png" alt="alerta">
+                    <label>Solo letras minúsculas y sin acento</label>
+                </div>
+                <div class="botones">
+                    <button type="button" id="encriptar" class="button1">Encriptar!</button>
+                    <button type="button" id="desencriptar" class="button2">Desencriptar!</button>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="containerTextoResultado">
+                <textarea class="textoResultado"></textarea>
+            </div>
+            <div class="containerImamgen">
+                <div class="contImagen">
+                    <img src="img/Muñeco.png" class="imagen" alt="muñeco">
+                </div>
+                <div class="parrafo">
+                    <h3 class="titulo">Ningún mensaje fue<br>fue encontrado</h3>
+                    <p class="recomendacion">Ingrese el texto que desees encriptar o<br>desencriptar</p>
+                </div>
+            <div>
+                <button id="copiar" type="button" class="btnCopiar">Copiar</button>
+            </div>
+        </div>
+        </section>
     </div>
-    
-    <script> 
-        const textoIngresado = document.querySelector('.textoIngresado');
-        textoIngresado.addEventListener('keydown', validarEntrada);
-        const btnEncriptar = document.querySelector('#encriptar');
-        btnEncriptar.addEventListener('click', mostrarTextoEncriptado);
-        const btnDesencriptar = document.querySelector("#descencriptar");
-        btnDesencriptar.addEventListener("click", mostrarTextoDesencriptado);
-        const btnCopiar = document.querySelector('#copiar');
-        btnCopiar.addEventListener('click', copy)
-        
-        function validarEntrada(event){
-            let tecla = event.key;
-            if (/^[a-z\s]+$|^Backspace$/.test(tecla)) {
-            } else {
-                event.preventDefault();
-            }
-        }
-        function copy() {
-          let copyText = document.querySelector("#textoResultado");
-          copyText.select();
-          document.execCommand("copy");
-        }
+    <script>
+        // const textoIngresado = document.querySelector('.textoIngresado');
+        // textoIngresado.addEventListener('keydown', validarEntrada);
+        // const btnEncriptar = document.querySelector('#encriptar');
+        // btnEncriptar.addEventListener('click', mostrarTextoEncriptado);
+        // const btnDesencriptar = document.querySelector("#desencriptar");
+        // btnDesencriptar.addEventListener("click", mostrarTextoDesencriptado);
+        // const btnCopiar = document.querySelector('#copiar');
+        // btnCopiar.addEventListener('click', copy)
+
+        // function validarEntrada(event){
+        //     let tecla = event.key;
+        //     if (/^[a-z\s]+$|^Backspace$/.test(tecla)) {
+        //     } else {
+        //         event.preventDefault();
+        //     }
+        // }
+        // function copy() {
+        //   let copyText = document.querySelector("#textoResultado");
+        //   copyText.select();
+        //   document.execCommand("copy");
+        // }
     </script>
 </body>
 
